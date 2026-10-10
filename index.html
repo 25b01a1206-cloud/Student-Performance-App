@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Performance Tracker</title>
+</head>
+
+<body>
+
+    <h1>Student Performance Tracker</h1>
+
+    <h2>Upload Student Excel Sheets</h2>
+
+    <form action="/upload" method="POST"
+          enctype="multipart/form-data">
+
+        <label>Unit 1 Marks:</label>
+        <input type="file" name="unit1_file"
+               accept=".xlsx">
+        <br><br>
+
+        <label>Unit 2 Marks:</label>
+        <input type="file" name="unit2_file"
+               accept=".xlsx">
+        <br><br>
+
+        <label>Quarterly Marks:</label>
+        <input type="file" name="quarterly_file"
+               accept=".xlsx">
+        <br><br>
+
+        <label>Half-Yearly Marks:</label>
+        <input type="file" name="halfyearly_file"
+               accept=".xlsx">
+        <br><br>
+
+        <label>Final Marks:</label>
+        <input type="file" name="final_file"
+               accept=".xlsx">
+        <br><br>
+
+        <button type="submit">
+            Upload Excel Files
+        </button>
+
+    </form>
+
+    <hr>
+
+    <h2>Search Student</h2>
+
+    <p>Enter the student's roll number to view performance.</p>
+
+    <form action="/student" method="POST">
+
+        <label>Roll Number:</label>
+
+        <input type="text" name="roll_number" required>
+
+        <button type="submit">
+            View Performance
+        </button>
+
+    </form>
+
+</body>
+</html>
